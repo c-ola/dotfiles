@@ -1,0 +1,2 @@
+require("cola-nvim")
+
