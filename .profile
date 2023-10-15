@@ -25,8 +25,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export QSYS_ROOTDIR="/home/nikola/Quartus/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"
 . "$HOME/.cargo/env"
-
-export PATH="$PATH:/usr/lib/dart/bin"
-
-export PATH="$PATH:/usr/local/go/bin"

@@ -6,17 +6,14 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
 
-    use(
+
+use(
     { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
 })
 
 use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.x',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
 } 
@@ -25,6 +22,8 @@ use {
 use { "catppuccin/nvim", as = "catppuccin"}
 
 use("folke/tokyonight.nvim")
+use 'marko-cerovac/material.nvim'
+
 
 use {'lervag/vimtex'}
 
