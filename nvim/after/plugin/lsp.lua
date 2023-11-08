@@ -1,3 +1,6 @@
+local ih = require('lsp-inlayhints')
+ih.setup()
+
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -6,16 +9,13 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
-    'arduino_language_server',
     'cmake',
-    'asm_lsp',
     'clangd',
-    'texlab',
     'marksman',
     'pylsp',
-    'lemminx',
     'jdtls',
-
+    'eslint',
+    'html',
 })
 
 -- Fix Undefined global 'vim'
@@ -24,6 +24,9 @@ lsp.configure('lua_ls', {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
+            },
+            hint = {
+                enable = true,
             }
         }
     }
@@ -68,6 +71,9 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set({'n', 'x'}, 'gq', function()
+    vim.lsp.buf.format({async = false, timeout_ms = 10000})
+  end, opts)
 end)
 
 lsp.setup()

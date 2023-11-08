@@ -15,7 +15,7 @@ shell:
     - "tmux attach || tmux"
 
 font:
-  size: 9.0
+  size: 12.0
   normal:
     family: MesloLGS NF
     style: Regular

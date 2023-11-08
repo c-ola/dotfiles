@@ -11,6 +11,7 @@ cp -r $HOME/.config/alacritty/alacritty.yml ./
 #cp -r $HOME/.config/xournalpp/{colornames.ini,palette.gpl,settings.xml} .
 
 cp $HOME/.p10k.zsh .
+cp $HOME/.profile .
 cp $HOME/.tmux.conf .
 cp $HOME/.zshrc .
     

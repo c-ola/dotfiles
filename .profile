@@ -25,6 +25,13 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-export QSYS_ROOTDIR="/home/nikola/Quartus/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"
 . "$HOME/.cargo/env"
+
+export PATH="$PATH:/usr/lib/dart/bin"
+
+export PATH="$PATH:/usr/local/go/bin"
+
+export PATH="$PATH:$HOME/.nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
