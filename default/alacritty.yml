@@ -1,0 +1,30 @@
+
+# Purple - catpuccin
+# Redish - 
+# Green -
+# Blue - tokyo-night-storm
+# light blue - rose-pine
+import:
+  - ~/.config/alacritty/themes/themes/tokyo-night.yaml
+
+shell:
+  program: /bin/zsh
+    #  args:
+    #- -l
+    #- -c
+      #- "tmux attach || tmux"
+
+font:
+  size: 17.0
+  normal:
+    family: Iosevka Nerd Font Mono
+    style: Regular
+  bold:
+    family: Iosevka Nerd Font Mono
+    style: Bold
+  #normal:
+  #  family: MesloLGS NF
+  #  style: Regular
+  #bold:
+  #  family: MesloLGS NF
+  #  style: Bold
