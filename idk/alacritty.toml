@@ -1,0 +1,12 @@
+import = ["/home/nikola/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"]
+
+[font]
+size = 18.0
+
+[font.bold]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
