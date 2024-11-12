@@ -115,10 +115,19 @@ fi
 
 # export QSYS_ROOTDIR="/home/nikola/.cache/yay/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
 
+export PATH="$PATH:/home/nikola/go/bin"
+
 alias nvminit='export NVM_DIR="/home/nikola/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
+alias ghidra='/home/nikola/ghidra/ghidra_11.0.3_PUBLIC/ghidraRun'
+
+export PATH="$PATH:/home/nikola/gitrepos/gradle-8.9-bin/gradle-8.9/bin"
 
 source ~/.profile
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# For rocm to work on 6750xt
+export HSA_OVERRIDE_GFX_VERSION="10.3.0"
