@@ -36,8 +36,10 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+                    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                    ['<C-f>'] = cmp.mapping.scroll_docs(4),
                     ['<Tab>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-                    ["<C-y>"] = cmp.mapping.complete(),
+                    -- ["<C-y>"] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.close(),
                 }),
                 snippet = {
@@ -132,7 +134,7 @@ return {
                     'marksman',
                     'jdtls',
                     'html',
-                    'ruff_lsp'
+                    --'ruff_lsp'
                     --'pylsp'
                 },
                 handlers = {

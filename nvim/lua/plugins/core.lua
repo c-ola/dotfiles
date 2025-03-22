@@ -1,14 +1,14 @@
 return {
     { 'folke/tokyonight.nvim' },
 
-    -- {"lukas-reineke/indent-blankline.nvim"},
+    {"lukas-reineke/indent-blankline.nvim"},
     {
         'nvim-lualine/lualine.nvim',
         opts = {
             options = {
-                theme = 'auto',
+                theme = 'rose-pine',
             }
-        }
+       }
     },
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
