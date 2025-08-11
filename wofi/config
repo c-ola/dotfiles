@@ -1,0 +1,5 @@
+allow_images=true
+hide_scroll=false
+matching=contains
+width=20%
+content_halign=left
