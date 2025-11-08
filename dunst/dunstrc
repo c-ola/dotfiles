@@ -89,7 +89,9 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#7f3fbf"
+    frame_color = "#C89D59"
+    background = "#1E1E2E"
+    foreground = "#F3B055"
 
     # Define a color for the separator.
     # possible values are:
@@ -111,7 +113,7 @@
 
     ### Text ###
 
-    font = Noto Sans Regular 9
+    font = Iosevka Nerd Font Mono 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -292,23 +294,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#28143c"
-    foreground = "#ffffff"
+    #background = "#28143c"
+    #foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     icon = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
 
 [urgency_normal]
-    background = "#28143c"
-    foreground = "#ffffff"
+    #background = "#28143c"QSE
+    #foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     icon = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
 
 [urgency_critical]
-    background = "#28143c"
-    foreground = "#ffffff"
-    frame_color = "#ff7f7f"
+    frame_color = "#AA3444"
+    #background = "#28143c"
+    #foreground = "#ffffff"
     timeout = 120
     # Icon for notifications with critical urgency, uncomment to enable
     icon = /usr/share/icons/Arc-X-D/status/16/dialog-warning.png
