@@ -1,5 +1,10 @@
-allow_images=true
-hide_scroll=false
+show=drun
+hide_scroll=true
 matching=contains
-width=20%
-content_halign=left
+allow_images=true
+prompt=Search Applications
+insensitive=true
+location=center
+lines=8
+columns=2
+width=35%

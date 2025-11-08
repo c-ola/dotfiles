@@ -1,36 +1,40 @@
 @import "/home/nikola/.config/colors/catppuccin.css";
 
 * {
-    font-family: Iosevka Nerd Font;
+    font: Iosevka Nerd Font;
     font-size: 20px;
+    border-radius: 10px;
 }
 
 #window {
+    border-radius: 10px;
+    radius: 10px;
     background-color: @crust;
 }
 
 #outer-box {
+    border-radius: 10px;
     background-color: @base;
 }
 
 #inner-box {
+    border-radius: 10px;
 }
 
 #input {
-    color: @subtext0;
-    background-color: @surface0;
-    border-color: @lavender;
-}
+}   
 
 #scroll {
 }
 
 #entry {
+    border-radius: 10px;
     color: @text;
 }
 
 #entry:selected {
     outline-style: solid;
+    outline-radius: 10px;
     background-color: @mantle;
     color: @blue;
 }
@@ -41,15 +45,9 @@
 
 #text:selected {
     color: @blue;
-    background-color: @mantle;
 }
 
 #img {
-    padding-right: 5px;
-}
-
-#img:selected {
-    padding-right: 5px;
-    background-color: @mantle;
+    margin-right: 5px;
 }
 
