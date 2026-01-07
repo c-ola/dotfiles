@@ -8,6 +8,7 @@ size = 15.0
 
 [font.normal]
 family = "Iosevka Nerd Font Mono"
+#family = "ComicShannsMono Nerd Font"
 style = "Regular"
 
 

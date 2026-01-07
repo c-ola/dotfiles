@@ -8,7 +8,7 @@ vim.pack.add({
     'https://github.com/neovim/nvim-lspconfig',
     'https://github.com/nvim-treesitter/nvim-treesitter',
     'https://github.com/folke/trouble.nvim',
-    { src = 'https://github.com/saghen/blink.cmp', name = 'blink'},
+    { src = 'https://github.com/saghen/blink.cmp', name = 'blink', version = "v1.6.0"},
     --'https://github.com/L3MON4D3/LuaSnip',
     
     'https://github.com/nvim-telescope/telescope.nvim',
@@ -46,6 +46,28 @@ require('mason-lspconfig').setup({
         --'pylsp',
     },
 })
+
+vim.lsp.config('rust_analyzer', {
+    settings = {
+        ['rust-analyzer'] = {
+            --lru = {
+            --    capacity = 128,
+            --},
+            --cachePriming = {
+            --    enable = false,
+            --},
+            --check = {
+            --    command = "clippy",
+            --},
+            --checkOnSave = true,
+            files = {
+                excludeDirs = { "target", ".git", ".cargo", "node_modules" },
+            },
+            --procMacro = { enable = false },
+        },
+    },
+})
+
 require('nvim-treesitter').setup()
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "rust", "lua", "toml" },
@@ -57,6 +79,7 @@ require'nvim-treesitter.configs'.setup {
 
 require('blink.cmp').setup({
     signature = { enable = true },
+    fuzzy = {implementation = "prefer_rust"},
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
     -- 'super-tab' for mappings similar to vscode (tab to accept)
     -- 'enter' for enter to accept
@@ -69,7 +92,7 @@ require('blink.cmp').setup({
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { 
+    keymap = {
         preset = 'default', 
         ['<Tab>'] = {
             function(cmp)
@@ -113,42 +136,10 @@ require('blink.cmp').setup({
 
 require('trouble').setup({
     opts = {}, -- for default options, refer to the configuration section for custom setup.
-    cmd = "Trouble",
-    keys = {
-        {
-            "<leader>xx",
-            "<cmd>Trouble diagnostics toggle<cr>",
-            desc = "Diagnostics (Trouble)",
-        },
-        {
-            "<leader>xX",
-            "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-            desc = "Buffer Diagnostics (Trouble)",
-        },
-        {
-            "<leader>cs",
-            "<cmd>Trouble symbols toggle focus=false<cr>",
-            desc = "Symbols (Trouble)",
-        },
-        {
-            "<leader>cl",
-            "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-            desc = "LSP Definitions / references / ... (Trouble)",
-        },
-        {
-            "<leader>xL",
-            "<cmd>Trouble loclist toggle<cr>",
-            desc = "Location List (Trouble)",
-        },
-        {
-            "<leader>xQ",
-            "<cmd>Trouble qflist toggle<cr>",
-            desc = "Quickfix List (Trouble)",
-        },
-    },
 })
 
---vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>")
+vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>")
+vim.keymap.set("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>")
 
 vim.cmd[[colorscheme tokyonight-night]]
 

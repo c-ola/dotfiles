@@ -1,0 +1,28 @@
+{
+  "plugins": {
+    "blink": {
+      "version": "'v1.6.0'"
+    },
+    "catppuccin": [],
+    "harpoon": {
+      "version": "'harpoon2'"
+    },
+    "indent-blankline": [],
+    "kanagawa.nvim": [],
+    "lualine.nvim": [],
+    "mason-lspconfig.nvim": [],
+    "mason.nvim": [],
+    "nvim-autopairs": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "nvim-web-devicons": [],
+    "plenary.nvim": [],
+    "rose-pine": [],
+    "telescope.nvim": [],
+    "tokyonight.nvim": [],
+    "trouble.nvim": [],
+    "undotree": [],
+    "vim-fugitive": [],
+    "vimtex": []
+  }
+}

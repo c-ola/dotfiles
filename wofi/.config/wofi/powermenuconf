@@ -1,6 +1,6 @@
 hide_scroll=true
 allow_images=true
-hide_search=false
+hide_search=true
 prompt=Power Menu
 insensitive=true
 location=center
