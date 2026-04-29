@@ -1,0 +1,18 @@
+@define-color transparent_dark rgba(21, 18, 27, 0.4);
+@define-color background #4E3341;
+@define-color bg2 #2D222A;
+@define-color foreground #ECD7C4;
+@define-color fg_sel #df7a7b;
+@define-color fg2 #df7a7b;
+@define-color fg #df7a7b;
+@define-color fg3 #D75755;
+@define-color fg_sel_inv #454546;
+@define-color fg_dark #454546;
+
+@define-color a #df7a7b;
+@define-color b #454546;
+@define-color c #5ddf7b;
+@define-color d #5c5ede;
+@define-color e #a75d5e;
+@define-color f #45a75d;
+@define-color g #4545a7;
